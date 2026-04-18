@@ -1,0 +1,119 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.4.2",
+    "lastTouchedAt": "2026-04-14T07:24:00.927Z"
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "anthropic/claude-haiku-4-5"
+      },
+      "models": {
+        "anthropic/claude-haiku-4-5": {}
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "model": "anthropic/claude-haiku-4-5",
+        "agentDir": "/home/clown/.openclaw/agents/soc/agent",
+        "workspace": "/home/clown/.openclaw/workspace"
+      },
+      {
+        "id": "trading",
+        "name": "trading",
+        "workspace": "/home/clown/.openclaw/workspace-trading",
+        "agentDir": "/home/clown/.openclaw/agents/trading/agent"
+      },
+      {
+        "id": "ha-agent",
+        "name": "ha-agent",
+        "model": "anthropic/claude-haiku-4-5",
+        "workspace": "/home/clown/.openclaw/workspace-ha-agent",
+        "agentDir": "/home/clown/.openclaw/agents/ha/agent"
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding"
+  },
+  "bindings": [
+    {
+      "type": "route",
+      "agentId": "ha-agent",
+      "comment": "Route telegram group -1003941975878 to ha-agent (peer-based, tier-1 match) (supergroup post-migration)",
+      "match": {
+        "channel": "telegram",
+        "peer": {
+          "kind": "group",
+          "id": "-1003941975878"
+        }
+      }
+    },
+    {
+      "type": "route",
+      "agentId": "main",
+      "match": {
+        "channel": "telegram"
+      }
+    }
+  ],
+  "messages": {
+    "ackReactionScope": "group-mentions"
+  },
+  "commands": {
+    "native": false,
+    "nativeSkills": false,
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "channels": {
+    "whatsapp": {
+      "enabled": true,
+      "dmPolicy": "allowlist",
+      "selfChatMode": true,
+      "allowFrom": [
+        "+66XXXXXXXXX"
+      ],
+      "groupPolicy": "allowlist",
+      "debounceMs": 0,
+      "mediaMaxMb": 50
+    },
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "streaming": "partial",
+      "allowFrom": [],
+      "groups": {
+        "-1003941975878": {
+          "groupPolicy": "open",
+          "requireMention": false
+        }
+      }
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "REPLACE_WITH_LOCAL_LOOPBACK_TOKEN"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    }
+  },
+  "plugins": {
+    "entries": {
+      "whatsapp": {
+        "enabled": true
+      }
+    }
+  }
+}

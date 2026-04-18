@@ -1,0 +1,5 @@
+Real secrets file on the host: /home/clown/.config/openclaw/secrets.env
+Quarantine location on the operator workstation:
+  C:\Users\pierr\.secrets\openclaw-secrets.env
+
+Never committed to git. See conf/secrets.env.example for the expected keys.

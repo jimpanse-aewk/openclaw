@@ -1,0 +1,13 @@
+# openclaw-gateway.service drop-in — EXAMPLE
+#
+# Install on the host as:
+#   ~/.config/systemd/user/openclaw-gateway.service.d/override.conf
+#
+# This is the ONLY supported way to feed secrets into the gateway.
+# Do NOT add inline `Environment="KEY=value"` lines — it duplicates the
+# secret on disk and makes rotation harder. The legacy
+# `openclaw.service.d/override.conf` did this; we cleaned it up on
+# 2026-04-18.
+
+[Service]
+EnvironmentFile=%h/.config/openclaw/secrets.env

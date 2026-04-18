@@ -1,0 +1,46 @@
+# OS / editors
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Secrets — defense in depth; real secrets live in C:\Users\pierr\.secrets\
+*.secret*
+*.secrets.md
+*.key
+*.pem
+*.age
+.env
+.env.*
+!.env.example
+secrets/
+secrets.env
+openclaw.json
+!openclaw.json.example
+
+# Runtime / session state — belongs on the host, not in git
+sessions.json
+*.sessions.json
+sessions/
+.openclaw/
+openclaw-*.log
+
+# Build artifacts
+*.tar.gz
+*.tar
+*.zip
+dist/
+build/
+
+# Test output
+tests/output/
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
