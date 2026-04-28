@@ -2,7 +2,6 @@
 
 # HANDOVER — openclaw
 
-<!-- UNVERIFIED 2026-04-28 — body fields synthesized by Claude, not yet operator-confirmed. -->
 
 ## Status
 
