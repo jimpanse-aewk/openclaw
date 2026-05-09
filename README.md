@@ -57,4 +57,4 @@ returns `billing — credit balance too low`. Top up before anything else.
 - `jimpanse-aewk/backupSOC` — automated SOC backup tool
 - `jimpanse-aewk/heartbeat` — Tailscale fleet liveness
 - `~/dev/context/services/openclaw-bot.md` — canonical bot-as-service facts
-- `~/dev/docs/DEV_ENV_MANUAL.md` — dev/ architecture overview
+- `~/dev/docs/ENVIRONMENT.md` — dev/ architecture overview

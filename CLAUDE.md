@@ -1,8 +1,8 @@
 # Project: openclaw
 
 Status: BROKEN
-Last verified: 2026-04-28
-Last audited: 2026-04-28
+Last verified: 2026-05-09
+Last audited: 2026-05-09
 
 ## Handover
 - HANDOVER.md — pickup card, read first
@@ -51,7 +51,7 @@ Versioned snapshot of the OpenClaw bot's configuration, agents, and workspace co
 - `agents/README.md` — agent id → agentDir mapping and parked-agent rules.
 - `~/dev/context/machines/openclaw.md` — host facts (IP, SSH, Tailscale).
 - `~/dev/context/services/openclaw-bot.md` — bot-as-service summary.
-- `~/dev/docs/audit-report-20260417-1106.md` — OpenClaw ground-truth audit from 2026-04-17 (point-in-time snapshot).
+- `~/dev/docs/archive/audit-report-20260417-1106.md` — OpenClaw ground-truth audit from 2026-04-17 (point-in-time snapshot).
 
 ## Commit hygiene
 Never commit any of the following to this repo:
