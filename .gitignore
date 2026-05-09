@@ -6,7 +6,7 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Secrets — defense in depth; real secrets live in C:\Users\pierr\.secrets\
+# Secrets — defense in depth; real secrets live in /home/clown/.config/openclaw/secrets.env on this host (per ENVIRONMENT.md §Auth posture).
 *.secret*
 *.secrets.md
 *.key
