@@ -2,7 +2,7 @@
 
 Status: BROKEN
 Last verified: 2026-05-09
-Last audited: 2026-05-09
+Last audited: 2026-05-12
 
 ## Handover
 - HANDOVER.md — pickup card, read first
