@@ -44,3 +44,6 @@ __pycache__/
 *.pyo
 .venv/
 venv/
+
+# cc-launch fleet audit reports (per-session, gitignored)
+.cc-launch-reports/
